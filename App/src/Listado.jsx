@@ -32,7 +32,6 @@ const Listado = ({ pedidos }) => {
         ))}
       </div>
     );
-  }
+}
   
-  export default Listado;
-  
+export default Listado;
