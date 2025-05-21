@@ -4,23 +4,26 @@ import Formulario from './Formulario';
 import Listado from './Listado';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pedidos, setPedidos] = useState([]);
+
+  const agregarPedido = (nuevoPedido) => {
+    setPedidos([...pedidos, nuevoPedido]);
+  };
 
   return (
-    <>
-      <div className="contenedor-app">
-    <div className="contenedor-principal">
-      <div>
-        <h1>Pedidos de Empanadas</h1>
-        <Formulario count={count} setCount={setCount}/>
-      </div>
-      <div>
-        <Listado count={count} setCount={setCount}/>
+    <div className="contenedor-app">
+      <div className="contenedor-principal">
+        <div>
+          <h1>Pedidos de Empanadas</h1>
+          <Formulario onAgregarPedido={agregarPedido} />
+        </div>
+        <div>
+          <Listado pedidos={pedidos} />
+        </div>
       </div>
     </div>
-  </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
+
