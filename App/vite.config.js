@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/TP5_PedidoDeEmpanadas/',
-  "homepage": "https://github.io/tiagoghel/TP5_PedidoDeEmpanadas.git"
+  "homepage": "https://tiagoghel.github.io/TP5_PedidoDeEmpanadas.git"
 })
